@@ -1,3 +1,5 @@
+# Run this
+# XAUTH_TOKEN=`xauth list` docker-compose up --build
 version: "3.7"
 services:
   viewer:
@@ -9,5 +11,9 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
     network_mode: host
-    command: /data_generation/build/bin/viewer
+    command: |-
+      bash -c '
+        xauth add ${XAUTH_TOKEN}; 
+        tail -f /dev/null
+      '
     container_name: data_generation

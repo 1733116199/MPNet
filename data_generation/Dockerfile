@@ -37,3 +37,4 @@ RUN apt-get update &&\
 WORKDIR /data_generation
 COPY ./ ./
 RUN make
+RUN apt-get install -y --no-install-recommends xauth xterm && touch /root/.Xauthority 
