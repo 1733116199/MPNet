@@ -1,12 +1,13 @@
-version: "3"
-
+version: "3.7"
 services:
-  app:
-    build: data_generation
+  viewer:
+    build: 
+      context: data_generation
+      network: host
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
     network_mode: host
-    command: tail -f /dev/null
+    command: /data_generation/build/bin/viewer
     container_name: data_generation

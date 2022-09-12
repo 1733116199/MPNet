@@ -37,4 +37,3 @@ RUN apt-get update &&\
 WORKDIR /data_generation
 COPY ./ ./
 RUN make
-RUN ls build/bin

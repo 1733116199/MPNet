@@ -1,0 +1,7 @@
+build
+**/pod-build
+lcmtypes/lcmtypes/c
+lcmtypes/lcmtypes/java
+lcmtypes/lcmtypes/python
+env
+Dockerfile
