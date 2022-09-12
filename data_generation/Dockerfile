@@ -28,9 +28,12 @@ RUN apt-get update &&\
     cmake .. &&\
     make -j 4 &&\
     make install &&\
+    rm -rf /lcm.zip /lcm-proj-lcm-abc18a8 &&\
+    cd / &&\
     git clone "https://github.com/libbot2/libbot2.git" &&\
     cd libbot2 &&\
-    make -j 4 BUILD_PREFIX=/usr/local
+    make -j 4 BUILD_PREFIX=/usr/local &&\
+    rm -rf /libbot2
 WORKDIR /data_generation
 COPY ./ ./
 RUN make
