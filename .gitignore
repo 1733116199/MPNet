@@ -4,3 +4,4 @@ data_generation/lcmtypes/lcmtypes/c
 data_generation/lcmtypes/lcmtypes/java
 data_generation/lcmtypes/lcmtypes/python
 data_generation/env
+*.pyc
