@@ -91,7 +91,7 @@ def main(args):
 		output = encoder(inp)
 		output = decoder(output)
 		loss = mse_loss(output,inp)
-		avg_loss=avg_loss+loss.data[0]
+		avg_loss=avg_loss+loss.data
 		# ===================backward====================
 	print "--Validation average loss:"
 	print avg_loss/(5000/args.batch_size)
