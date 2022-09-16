@@ -244,9 +244,9 @@ def main(args):
 	tp=0
 	fp=0
 	tot=[]
-	for i in range(0,1):
+	for i in range(0,100):
 		et=[]
-		for j in range(0,2):
+		for j in range(0,200):
 			print ("step: i="+str(i)+" j="+str(j))
 			p1_ind=0
 			p2_ind=0
